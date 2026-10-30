@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutti i Progetti - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleProgetti.css"> 
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="homepageTester.html" class="menu-link" id="navDashboard">Dashboard</a>
+                <a href="#" class="menu-link active" id="navProgetti">Tutti i Progetti</a>
+                <a href="TicketsTester.html" class="menu-link" id="navTickets">Le mie Segnalazioni</a>
+                <a href="commentiTester.html" class="menu-link" id="navCommenti">Feed e Commenti</a>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="topbar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cerca un progetto...">
+                </div>
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Giulia Bianchi</span>
+                    <img src="images/User1.png" alt="Profilo" class="user-avatar" id="userAvatar">
+
+                    <button class="btn-logout" id="btnLogout" title="Esci (Logout)">
+                        <img src="images/logout.png" alt="Logout" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                <div class="page-header-actions">
+                    <h2 class="page-title">Panoramica Progetti</h2> <br>
+                </div>
+
+                <div class="full-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Nome Progetto</th>
+                                <th>Team</th>
+                                <th>Bug Aperti</th>
+                                <th>Scadenza</th>
+                                <th>Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projectsTableBody">
+                            <tr><td colspan="6" style="text-align:center;padding:1rem;color:#888;">Caricamento...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalProjectTicket">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Segnala Bug su <span id="targetProject">E-commerce</span></h3>
+                <button class="btn-close-modal" id="closeProjectTicketModal">&times;</button>
+            </div>
+            <form class="modal-form" id="formProjectTicket">
+                <div class="input-group">
+                    <label for="projectTicketTitle">Titolo</label>
+                    <input type="text" id="projectTicketTitle" placeholder="Es. Pagina non carica correttamente..." required>
+                </div>
+                <div class="input-group">
+                    <label for="projectTicketDesc">Passaggi per riprodurre</label>
+                    <textarea id="projectTicketDesc" rows="4" placeholder="Descrivi il problema e come riprodurlo..." required></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelProjectTicketBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Invia Segnalazione</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

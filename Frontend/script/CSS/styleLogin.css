@@ -1,0 +1,30 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { background-color: #F4F7F9; display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+
+.login-wrapper { width: 100%; padding: 20px; display: flex; justify-content: center; }
+.login-card { background-color: #FFFFFF; width: 100%; max-width: 420px; padding: 50px 40px; border-radius: 10px; box-shadow: 0 8px 24px rgba(10, 37, 64, 0.08); border: 1px solid #E6EBF1; }
+
+
+.brand-header { text-align: center; margin-bottom: 40px; }
+.brand-logo { color: #0A2540; font-size: 32px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px; }
+.brand-subtitle { color: #6B7C93; font-size: 15px; }
+.input-group { margin-bottom: 12px; }
+.input-group label { display: block; margin-bottom: 4px; color: #0A2540; font-weight: 600; font-size: 14px; }
+.input-group input { width: 100%; padding: 14px; border: 1px solid #D3DCE6; border-radius: 6px; font-size: 15px; color: #333; transition: all 0.2s ease; background-color: #FAFBFC; }
+.input-group input:focus { outline: none; border-color: #0A2540; background-color: #FFFFFF; box-shadow: 0 0 0 3px rgba(10, 37, 64, 0.1); }
+.input-group input::placeholder { color: #A3B1C6; }
+
+.btn-login { width: 100%; padding: 14px; background-color: #0A2540; color: #FFFFFF; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background-color 0.2s ease, transform 0.1s ease; margin-top: 10px; }
+.btn-login:hover { background-color: #113A63; }
+.btn-login:active { transform: scale(0.98); }
+.options { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 14px; color: #6B7C93; }
+
+.remember-me { cursor: pointer; }
+.forgot-password { color: #0A2540; text-decoration: none; font-weight: 600; }
+.forgot-password:hover { text-decoration: underline; }
+
+.register-link { text-align: center; margin-top: 20px; font-size: 14px; color: #6B7C93; }
+.register-link a { color: #0A2540; text-decoration: none; font-weight: 600; }
+.register-link a:hover { text-decoration: underline; }

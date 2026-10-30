@@ -1,0 +1,46 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: flowcheck
+      MYSQL_USER: flowcheck_user
+      MYSQL_PASSWORD: flowcheck_pass
+    volumes:
+      - ./Backend/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro,z
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpass"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  app:
+    build: ./Backend
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: db
+      DB_NAME: flowcheck
+      DB_USER: flowcheck_user
+      DB_PASS: flowcheck_pass
+    volumes:
+      - ./Backend:/var/www/html:z
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./Frontend:/usr/share/nginx/html:ro,z
+      - ./Frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro,z
+    depends_on:
+      - app
+
+volumes:
+  db_data:

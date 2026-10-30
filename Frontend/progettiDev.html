@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I miei Progetti - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleProgetti.css"> 
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="homepageDev.html" class="menu-link" id="navDashboard">Dashboard</a>
+                <a href="#" class="menu-link active" id="navProgetti">I miei Progetti</a>
+                <a href="TicketsDev.html" class="menu-link" id="navTickets">I miei Tickets</a>
+                <a href="commentiDev.html" class="menu-link" id="navCommenti">Feedback e Commenti</a>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            
+            <header class="topbar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cerca tra i tuoi progetti...">
+                </div>
+
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Marco Randi</span>
+                    <img src="images/User2.png" alt="Profilo" class="user-avatar" id="userAvatar">
+                    
+                    <button class="btn-logout" id="btnLogout" title="Esci (Logout)">
+                        <img src="images/logout.png" alt="Logout" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                
+                <div class="page-header-actions">
+                    <h2 class="page-title">Progetti Assegnati</h2>
+                    <br>
+                    </div>
+
+                <div class="full-table-container">
+                    <table class="data-table" id="projectsTable">
+                        <thead>
+                            <tr>
+                                <th>Nome Progetto</th>
+                                <th>Team</th>
+                                <th>Bug Aperti</th>
+                                <th>Scadenza</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projectsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

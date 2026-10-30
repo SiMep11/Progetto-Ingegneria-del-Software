@@ -1,0 +1,171 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Diagramma dei Pacchetti" id="GJ0Q_ZOPPFhRVz22lmIQ">
+    <mxGraphModel dx="1426" dy="841" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="800" math="0" shadow="0" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-1" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=30;" value="FlowCheck" vertex="1">
+          <mxGeometry height="730" width="1360" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-2" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=110;height=40;" value="Frontend (Client Side)" vertex="1">
+          <mxGeometry height="590" width="600" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-32" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=80;height=35;" value="Logic Layer (JS)" vertex="1">
+          <mxGeometry height="305" width="580" x="90" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-11" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;Presenters&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;LoginPresenter, ProjectPresenter, TicketPresenter,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;UserPresenter&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="170" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-12" parent="8A5FYGDWBZNcq0RCk9QT-11" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-15" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;Models&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;LoginModel,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;ProjectModel,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;TicketModel,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;UserModel&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="460" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-16" parent="8A5FYGDWBZNcq0RCk9QT-15" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-18" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;Views&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;LoginView,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;ProjectView,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;TicketView,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;UserView&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="170" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-19" parent="8A5FYGDWBZNcq0RCk9QT-18" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-21" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;Core / Network&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;ApiClient,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;ProjectFactory,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;TicketFactory,&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;&amp;nbsp;UserFactory&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="460" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-22" parent="8A5FYGDWBZNcq0RCk9QT-21" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-10" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=80;height=30;" value="View Layer" vertex="1">
+          <mxGeometry height="170" width="490" x="90" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-23" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;HTML Templates&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;login.html,&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;homePageAdmin.html&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;homePageDev.html,&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;homePageTester.html, ecc.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="100" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-24" parent="8A5FYGDWBZNcq0RCk9QT-23" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-25" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;Styles&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;styleLogin.css,&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;styleHome.css,&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;styleProgetti.css,&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;styleTicket.css&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="390" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-26" parent="8A5FYGDWBZNcq0RCk9QT-25" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-27" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="Usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="190" as="sourcePoint" />
+            <mxPoint x="460" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-28" edge="1" parent="1" source="8A5FYGDWBZNcq0RCk9QT-11" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="8A5FYGDWBZNcq0RCk9QT-18" value="Aggiorna">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="270" as="sourcePoint" />
+            <mxPoint x="360" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-29" edge="1" parent="1" source="8A5FYGDWBZNcq0RCk9QT-15" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="8A5FYGDWBZNcq0RCk9QT-21" value="Usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="290" as="sourcePoint" />
+            <mxPoint x="570" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-30" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="Manipola DOM">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="415" as="sourcePoint" />
+            <mxPoint x="231" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8A5FYGDWBZNcq0RCk9QT-31" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="HTTP/JSON">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="370" as="sourcePoint" />
+            <mxPoint x="710" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="be_frame" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=115;height=40;" value="Backend (Server Side)" vertex="1">
+          <mxGeometry height="590" width="500" x="710" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="be_infra" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;infrastructure&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;Router&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;AuthMiddleware&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;Database &amp;lt;&amp;lt;Singleton&amp;gt;&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="480" x="720" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="be_infra_m" parent="be_infra" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="be_ctrl" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;controllers&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;AuthController&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;UtenteController&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;ProgettoController&amp;nbsp;&amp;nbsp;TicketController&amp;nbsp;&amp;nbsp;CommentoController&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="480" x="720" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="be_ctrl_m" parent="be_ctrl" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="be_fm" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;Factory Method&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;TicketFactory&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;BaseTicket&amp;nbsp;{abstract}&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;BugTicket&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;FeatureTicket&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="225" x="720" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="be_fm_m" parent="be_fm" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="be_sp" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&amp;lt;&amp;lt;State Pattern&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;TicketStateInterface&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;StatoAperto&amp;nbsp;&amp;nbsp;StatoInLavorazione&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;StatoInRevisione&amp;nbsp;&amp;nbsp;StatoConfermato&lt;/div&gt;&lt;div style=&quot;font-weight: 700;&quot;&gt;StatoChiuso&amp;nbsp;&amp;nbsp;TicketStateContext&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="240" x="960" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="be_sp_m" parent="be_sp" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="be_arr1" edge="1" parent="1" source="be_ctrl" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="be_infra" value="Usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be_arr2" edge="1" parent="1" source="be_ctrl" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="be_fm" value="Usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be_arr3" edge="1" parent="1" source="be_ctrl" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="be_sp" value="Usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be_arr_db" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="SQL / PDO">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210" y="420" as="sourcePoint" />
+            <mxPoint x="1250" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="db_box" parent="1" style="swimlane;html=1;fontStyle=1;align=center;startSize=36;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="&lt;i&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;MySQL 8.0" vertex="1">
+          <mxGeometry height="200" width="110" x="1250" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="db_r1" parent="db_box" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" value="utenti" vertex="1">
+          <mxGeometry height="22" width="110" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="db_r2" parent="db_box" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" value="sessioni" vertex="1">
+          <mxGeometry height="22" width="110" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="db_r3" parent="db_box" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" value="progetti" vertex="1">
+          <mxGeometry height="22" width="110" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="db_r4" parent="db_box" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" value="progetto_utente" vertex="1">
+          <mxGeometry height="22" width="110" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="db_r5" parent="db_box" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" value="ticket" vertex="1">
+          <mxGeometry height="22" width="110" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="db_r6" parent="db_box" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" value="commenti" vertex="1">
+          <mxGeometry height="22" width="110" y="146" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

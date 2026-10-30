@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleTicketsAdmin.css"> 
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="homepageAdmin.html" class="menu-link" id="navDashboard">Dashboard</a>
+                <a href="progettiAdmin.html" class="menu-link" id="navProgetti">Progetti</a>
+                <a href="#" class="menu-link active" id="navTickets">Tickets</a>
+                <a href="UtentiAdmin.html" class="menu-link" id="navUtenti">Utenti</a>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            
+            <header class="topbar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cerca un ticket...">
+                </div>
+
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Luigi Rossi</span>
+                    <img src="images/User3.png" alt="Profilo" class="user-avatar" id="userAvatar">
+                    
+                    <button class="btn-logout" id="btnLogout" title="Esci (Logout)">
+                        <img src="images/logout.png" alt="Logout" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                
+                <div class="page-header-actions">
+                    <h2 class="page-title">Gestione Tickets</h2>
+                    <button id="btnCreateTicket" class="btn-primary">
+                        <img src="images/plus.png" class="icon-add" alt="">
+                        Nuovo Ticket
+                    </button>
+                </div>
+
+                <div class="full-table-container">
+                    <table class="data-table" id="ticketsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo</th>
+                                <th>Titolo</th>
+                                <th>Progetto</th>
+                                <th>Assegnato a</th>
+                                <th>Stato</th>
+                                <th>Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ticketsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalNewTicket">
+        <div class="modal-card">
+            
+            <div class="modal-header">
+                <h3>Nuovo Ticket</h3>
+                <button class="btn-close-modal" id="closeTicketModal">&times;</button>
+            </div>
+            
+            <form class="modal-form" id="formNewTicket">
+
+                <div class="input-group">
+                    <label for="ticketTitle">Titolo</label>
+                    <input type="text" id="ticketTitle" placeholder="Breve descrizione del ticket" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="ticketType">Tipologia</label>
+                    <select id="ticketType" required>
+                        <option value="">Seleziona...</option>
+                        <option value="bug">Bug</option>
+                        <option value="feature">Feature</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="ticketProject">Progetto</label>
+                    <select id="ticketProject" required>
+                        <option value="">Seleziona un progetto...</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="ticketAssignee">Assegna a (Sviluppatore)</label>
+                    <select id="ticketAssignee">
+                        <option value="">Nessuno</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="ticketComment">Descrizione</label>
+                    <textarea id="ticketComment" rows="4" placeholder="Descrivi il problema o la nuova funzionalità richiesta..." required></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelTicketBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Invia Ticket</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalViewTicket">
+        <div class="modal-card">
+            
+            <div class="modal-header">
+                <h3>Dettagli Ticket:   <span id="viewDetailId">#T-1042</span></h3>
+                <button class="btn-close-modal" id="closeViewTicketModal">&times;</button>
+            </div>
+            
+            <div class="modal-form">
+                
+                <div class="input-group">
+                    <label>Progetto di riferimento</label>
+                    <p class="read-only-data" id="viewDetailProject">E-commerce Flow</p>
+                </div>
+
+                <div class="input-group">
+                    <label>Tipologia e Stato</label>
+                    <div class="badges-row">
+                        <span class="type-badge type-bug" id="viewDetailType">Bug</span>
+                        <span class="status-badge status-open" id="viewDetailStatus">Aperto</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Aperto da</label>
+                    <p class="read-only-data" id="viewDetailUser">Marco Randi</p>
+                </div>
+                
+                <div class="input-group">
+                    <label>Descrizione / Commento Iniziale</label>
+                    <div class="read-only-box" id="viewDetailDesc">
+                        Il carrello non aggiorna il totale quando si rimuove un prodotto usando il tasto 'X' da mobile. Il problema si verifica solo su Safari per iOS.
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="closeDetailBtn">Chiudi</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalEditTicket">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Modifica Ticket <span style="color:#6B7C93; font-size:16px;">#T-1042</span></h3>
+                <button class="btn-close-modal" id="closeEditTicketModal">&times;</button>
+            </div>
+            <form class="modal-form" id="formEditTicket">
+                <div class="input-group">
+                    <label for="editTicketAssignee">Assegnato a (Sviluppatore)</label>
+                    <select id="editTicketAssignee">
+                        <option value="">Nessuno</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="editTicketStatus">Stato Avanzamento</label>
+                    <select id="editTicketStatus" required>
+                        <option value="open" selected>Aperto</option>
+                        <option value="progress">In Lavorazione</option>
+                        <option value="closed">Chiuso</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="editTicketDesc">Descrizione Problema</label>
+                    <textarea id="editTicketDesc" rows="4" required>Il carrello non aggiorna il totale quando si rimuove un prodotto...</textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelEditTicketBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Salva Modifiche</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalTicketComments">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Discussione Ticket <span>#T-1042</span></h3>
+                <button class="btn-close-modal" id="closeCommentsModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <div class="input-group">
+                    <label>Conversazione</label>
+                    <div class="read-only-box" style="max-height: 200px; overflow-y: auto;">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="newTicketComment">Aggiungi un commento</label>
+                    <textarea id="newTicketComment" rows="3" placeholder="Scrivi qui il tuo aggiornamento tecnico..." required></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="closeCommentsBtn">Chiudi</button>
+                    <button type="button" class="btn-primary" id="sendCommentBtn">Invia Messaggio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalDeleteTicket">
+        <div class="modal-card" style="max-width: 400px;">
+            <div class="modal-header">
+                <h3 style="color: #DE350B;">Conferma Eliminazione</h3>
+                <button class="btn-close-modal" id="closeDeleteModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <p style="font-size: 15px; color: #4A5568; line-height: 1.6; margin-bottom: 20px;">
+                    Sei sicuro di voler eliminare definitivamente il ticket <strong>#T-1042</strong>? Questa azione non può essere annullata.
+                </p>
+                <div class="modal-actions" style="justify-content: center;">
+                    <button type="button" class="btn-secondary" id="cancelDeleteBtn">NO, ANNULLA</button>
+                    <button type="button" class="btn-danger" id="confirmDeleteBtn">SÌ, ELIMINA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

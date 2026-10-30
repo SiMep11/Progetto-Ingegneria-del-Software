@@ -1,0 +1,349 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Sequenza: Creazione Ticket Bug" id="seq-crea-ticket">
+    <mxGraphModel dx="1426" dy="841" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1200" pageHeight="950" math="0" shadow="0" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-525" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="53" width="10" x="223" y="247" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;strokeColor=none;fillColor=none;labelBackgroundColor=none;" value="Diagramma di Sequenza: Creazione Ticket Bug" vertex="1">
+          <mxGeometry height="22" width="900" x="100" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="100" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" value="Tester / Dev" vertex="1">
+          <mxGeometry height="40" width="130" x="5" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" value="TicketView" vertex="1">
+          <mxGeometry height="40" width="130" x="165" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="102" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" value="TicketPresenter" vertex="1">
+          <mxGeometry height="40" width="130" x="335" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="103" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" value="TicketModel" vertex="1">
+          <mxGeometry height="40" width="130" x="500" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="104" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" value="ApiClient" vertex="1">
+          <mxGeometry height="40" width="130" x="660" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="105" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" value="TicketController" vertex="1">
+          <mxGeometry height="40" width="130" x="830" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="106" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" value="Database" vertex="1">
+          <mxGeometry height="40" width="130" x="990" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="200" edge="1" parent="1" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.057;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" target="400" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="66" as="sourcePoint" />
+            <mxPoint x="70" y="952" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="201" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-544" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.205;entryY=0.036;entryDx=0;entryDy=0;entryPerimeter=0;" target="400" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="66" as="sourcePoint" />
+            <mxPoint x="230" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="202" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-528" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.358;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" target="400" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="66" as="sourcePoint" />
+            <mxPoint x="400" y="954" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="203" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-530" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.51;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" target="400" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="66" as="sourcePoint" />
+            <mxPoint x="565" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="204" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-532" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.655;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" target="400" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="66" as="sourcePoint" />
+            <mxPoint x="725" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="205" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-534" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.81;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" target="400" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="895" y="66" as="sourcePoint" />
+            <mxPoint x="895" y="954" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="206" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-541" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.956;entryY=0.034;entryDx=0;entryDy=0;entryPerimeter=0;" target="400" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1055" y="66" as="sourcePoint" />
+            <mxPoint x="1055" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="300" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="1. clicca &#39;Nuovo Ticket&#39;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="110" as="sourcePoint" />
+            <mxPoint x="230" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="301" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="2. handleOpenNewModal()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="155" as="sourcePoint" />
+            <mxPoint x="400" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="302" edge="1" parent="1" style="dashed=1;endArrow=open;endFill=0;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="3. showNewTicketModal()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="200" as="sourcePoint" />
+            <mxPoint x="230" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="303" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="4. compila form (titolo, tipo=bug) e invia">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="250" as="sourcePoint" />
+            <mxPoint x="230" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="304" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="5. handleSaveTicket(data)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="295" as="sourcePoint" />
+            <mxPoint x="400" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="305" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="6. createTicket(data)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="340" as="sourcePoint" />
+            <mxPoint x="565" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="306" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="7. post(&#39;/tickets&#39;, data)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="385" as="sourcePoint" />
+            <mxPoint x="725" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="307" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;fontColor=default;labelBackgroundColor=none;" value="8. POST /api/v1/tickets [HTTP]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="430" as="sourcePoint" />
+            <mxPoint x="895" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="309" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="10. INSERT INTO ticket (titolo, tipo, stato, progetto_id, severita)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="895" y="525" as="sourcePoint" />
+            <mxPoint x="1055" y="525" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="310" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-534" style="dashed=1;endArrow=open;endFill=0;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="11. : ticketId">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1055" y="565" as="sourcePoint" />
+            <mxPoint x="895" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="311" edge="1" parent="1" style="dashed=1;endArrow=open;endFill=0;align=center;verticalAlign=bottom;fontColor=default;labelBackgroundColor=none;" value="12. 201 {id, titolo, tipo, stato, ...}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="895" y="610" as="sourcePoint" />
+            <mxPoint x="725" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="312" edge="1" parent="1" style="dashed=1;endArrow=open;endFill=0;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="13. : {ticket}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="655" as="sourcePoint" />
+            <mxPoint x="565" y="655" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="313" edge="1" parent="1" style="dashed=1;endArrow=open;endFill=0;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="22. : resolve(ticket)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="1042" as="sourcePoint" />
+            <mxPoint x="395" y="1042" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="315" edge="1" parent="1" style="dashed=1;endArrow=open;endFill=0;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="24. : lista ticket aggiornata">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="225" y="1132" as="sourcePoint" />
+            <mxPoint x="65" y="1132" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="400" parent="1" style="shape=note;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=11;labelBackgroundColor=none;" value="&lt;b&gt;opt [validazione fallita / utente non autorizzato]:&lt;/b&gt; TicketFactory::create() o AuthMiddleware lanciano eccezione → TicketController → 422/403 {error} → TicketModel reject() → TicketPresenter → showToast(error, &#39;error&#39;)" vertex="1">
+          <mxGeometry height="55" width="1100" x="5" y="1154" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-501" edge="1" parent="1" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="PEMZKYCnYVyjJoQiLUBo-500" value="await fetchTickets()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="595" y="703" />
+            </Array>
+            <mxPoint x="565" y="673" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-504" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="567" y="748" as="sourcePoint" />
+            <mxPoint x="724" y="748" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-506" parent="1" style="text;whiteSpace=wrap;html=1;fontColor=default;labelBackgroundColor=default;" value="&lt;span style=&quot;font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;15. : get(&#39;/tickets&#39;)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="36" width="85" x="606.998787878788" y="723.998484848485" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-507" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-536" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="725" y="766" as="sourcePoint" />
+            <mxPoint x="894" y="766" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-508" parent="1" style="text;whiteSpace=wrap;html=1;fontColor=default;labelBackgroundColor=default;" value="&lt;span style=&quot;font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;16. : GET /api/v1/tickets [HTTP]&lt;/span&gt;" vertex="1">
+          <mxGeometry height="36" width="160" x="731" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-510" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="896" y="799" as="sourcePoint" />
+            <mxPoint x="1053" y="799" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-511" parent="1" style="text;whiteSpace=wrap;html=1;fontColor=default;labelBackgroundColor=default;" value="&lt;span style=&quot;font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;17. : SELECT * FROM ticket&lt;/span&gt;" vertex="1">
+          <mxGeometry height="36" width="160" x="896" y="772" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-512" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;dashed=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1054" y="845" as="sourcePoint" />
+            <mxPoint x="895" y="845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-513" parent="1" style="text;whiteSpace=wrap;html=1;fontColor=default;labelBackgroundColor=default;" value="&lt;span style=&quot;font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;18. : [lista di ticket in JSON]&lt;/span&gt;" vertex="1">
+          <mxGeometry height="36" width="160" x="905" y="819" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-514" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;dashed=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="894" y="885" as="sourcePoint" />
+            <mxPoint x="726" y="885" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-515" parent="1" style="text;whiteSpace=wrap;html=1;fontColor=default;labelBackgroundColor=default;" value="&lt;span style=&quot;font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;19. : 200 OK [lista JSON]&lt;/span&gt;" vertex="1">
+          <mxGeometry height="36" width="160" x="745" y="859" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-516" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;dashed=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="723.5" y="913" as="sourcePoint" />
+            <mxPoint x="564.5" y="913" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-517" parent="1" style="text;whiteSpace=wrap;html=1;fontColor=default;labelBackgroundColor=default;" value="&lt;span style=&quot;font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;20. : [lista JSON]&lt;/span&gt;" vertex="1">
+          <mxGeometry height="36" width="160" x="574.5" y="887" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-519" edge="1" parent="1" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="PEMZKYCnYVyjJoQiLUBo-518" value="map(TicketFactory.create)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="595" y="967" />
+            </Array>
+            <mxPoint x="565" y="937" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-520" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="891" y="463" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-521" edge="1" parent="1" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="PEMZKYCnYVyjJoQiLUBo-520" value="9. AuthMiddleware::checlk()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="926" y="473" />
+            </Array>
+            <mxPoint x="896" y="443" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-524" edge="1" parent="1" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.205;entryY=0.036;entryDx=0;entryDy=0;entryPerimeter=0;" target="PEMZKYCnYVyjJoQiLUBo-522" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="66" as="sourcePoint" />
+            <mxPoint x="231" y="1156" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-522" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="225" y="141" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-526" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-522" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.205;entryY=0.036;entryDx=0;entryDy=0;entryPerimeter=0;" target="PEMZKYCnYVyjJoQiLUBo-525" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="231" y="221" as="sourcePoint" />
+            <mxPoint x="231" y="1156" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-527" edge="1" parent="1" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.358;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" target="PEMZKYCnYVyjJoQiLUBo-528" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="66" as="sourcePoint" />
+            <mxPoint x="399" y="1155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-528" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="762" width="10" x="395" y="289" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-529" edge="1" parent="1" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.51;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" target="PEMZKYCnYVyjJoQiLUBo-530" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="66" as="sourcePoint" />
+            <mxPoint x="566" y="1154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-530" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="676" width="10" x="564.5" y="333" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-531" edge="1" parent="1" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.655;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" target="PEMZKYCnYVyjJoQiLUBo-532" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="66" as="sourcePoint" />
+            <mxPoint x="726" y="1154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-532" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="239" width="10" x="720" y="376" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-533" edge="1" parent="1" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.81;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" target="PEMZKYCnYVyjJoQiLUBo-534" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="895" y="66" as="sourcePoint" />
+            <mxPoint x="896" y="1155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-535" edge="1" parent="1" style="dashed=1;endArrow=open;endFill=0;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" target="PEMZKYCnYVyjJoQiLUBo-534" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1055" y="565" as="sourcePoint" />
+            <mxPoint x="895" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-534" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="54" width="10" x="890" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-537" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" target="PEMZKYCnYVyjJoQiLUBo-536" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="725" y="766" as="sourcePoint" />
+            <mxPoint x="894" y="766" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-536" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="150" width="10" x="720" y="743" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-538" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="891" y="792" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-542" edge="1" parent="1" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.956;entryY=0.034;entryDx=0;entryDy=0;entryPerimeter=0;" target="PEMZKYCnYVyjJoQiLUBo-541" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1055" y="66" as="sourcePoint" />
+            <mxPoint x="1057" y="1156" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-541" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="57" width="10" x="1052" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-543" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="62" width="10" x="1052" y="792" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-500" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="564.5" y="693" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-518" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="564.5" y="957" as="geometry" />
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-545" edge="1" parent="1" source="PEMZKYCnYVyjJoQiLUBo-525" style="dashed=1;endArrow=none;labelBackgroundColor=none;fontColor=default;entryX=0.205;entryY=0.036;entryDx=0;entryDy=0;entryPerimeter=0;" target="PEMZKYCnYVyjJoQiLUBo-544" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="231" y="300" as="sourcePoint" />
+            <mxPoint x="231" y="1156" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEMZKYCnYVyjJoQiLUBo-544" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="51" width="10" x="223" y="1086" as="geometry" />
+        </mxCell>
+        <mxCell id="314" edge="1" parent="1" style="endArrow=block;endFill=1;align=center;verticalAlign=bottom;labelBackgroundColor=none;fontColor=default;" value="23. render(tickets) + showToast(&#39;Ticket creato&#39;)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395" y="1087" as="sourcePoint" />
+            <mxPoint x="225" y="1087" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

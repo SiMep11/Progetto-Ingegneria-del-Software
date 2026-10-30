@@ -1,0 +1,202 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="DB FlowCheck" id="db-flowcheck-v2">
+    <mxGraphModel dx="1783" dy="1051" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="900" math="0" shadow="0" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t_utenti" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;container=1;" value="utenti" vertex="1">
+          <mxGeometry height="212" width="240" x="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r_u_id" parent="t_utenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;overflow=hidden;rotatable=0;" value="PK  id : INT AI" vertex="1">
+          <mxGeometry height="26" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r_u_nome" parent="t_utenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     nome : VARCHAR(100)" vertex="1">
+          <mxGeometry height="26" width="240" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r_u_cognome" parent="t_utenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     cognome : VARCHAR(100)" vertex="1">
+          <mxGeometry height="26" width="240" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="r_u_email" parent="t_utenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     email : VARCHAR(255) UNIQUE" vertex="1">
+          <mxGeometry height="26" width="240" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="r_u_pw" parent="t_utenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     password_hash : VARCHAR(255)" vertex="1">
+          <mxGeometry height="26" width="240" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="r_u_ruolo" parent="t_utenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     ruolo : ENUM(admin,developer,tester)" vertex="1">
+          <mxGeometry height="26" width="240" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="r_u_created" parent="t_utenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="240" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="t_sessioni" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;container=1;" value="sessioni" vertex="1">
+          <mxGeometry height="134" width="230" x="700" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r_s_id" parent="t_sessioni" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;overflow=hidden;rotatable=0;" value="PK  id : INT AI" vertex="1">
+          <mxGeometry height="26" width="230" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r_s_uid" parent="t_sessioni" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;overflow=hidden;rotatable=0;" value="FK  utente_id → utenti" vertex="1">
+          <mxGeometry height="26" width="230" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r_s_token" parent="t_sessioni" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     token : VARCHAR(64) UNIQUE" vertex="1">
+          <mxGeometry height="26" width="230" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="r_s_scad" parent="t_sessioni" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     scadenza : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="230" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pu" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;container=1;" value="progetto_utente  (N:M)" vertex="1">
+          <mxGeometry height="82" width="240" x="340" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pu_pid" parent="t_pu" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=3;overflow=hidden;rotatable=0;" value="FK PK  progetto_id → progetti" vertex="1">
+          <mxGeometry height="26" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pu_uid" parent="t_pu" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=3;overflow=hidden;rotatable=0;" value="FK PK  utente_id → utenti" vertex="1">
+          <mxGeometry height="26" width="240" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="t_progetti" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;container=1;" value="progetti" vertex="1">
+          <mxGeometry height="238" width="250" x="700" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="r_p_id" parent="t_progetti" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;overflow=hidden;rotatable=0;" value="PK  id : INT AI" vertex="1">
+          <mxGeometry height="26" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r_p_nome" parent="t_progetti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     nome : VARCHAR(255)" vertex="1">
+          <mxGeometry height="26" width="250" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r_p_desc" parent="t_progetti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     descrizione : TEXT" vertex="1">
+          <mxGeometry height="26" width="250" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="r_p_pm" parent="t_progetti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     pm : VARCHAR(255)" vertex="1">
+          <mxGeometry height="26" width="250" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="r_p_deadline" parent="t_progetti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     deadline : DATE" vertex="1">
+          <mxGeometry height="26" width="250" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="r_p_cda" parent="t_progetti" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;overflow=hidden;rotatable=0;" value="FK  creato_da → utenti" vertex="1">
+          <mxGeometry height="26" width="250" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="r_p_created" parent="t_progetti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="250" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="r_p_updated" parent="t_progetti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     updated_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="250" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="t_ticket" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;container=1;" value="ticket" vertex="1">
+          <mxGeometry height="342" width="260" x="340" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_id" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;overflow=hidden;rotatable=0;" value="PK  id : INT AI" vertex="1">
+          <mxGeometry height="26" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_titolo" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     titolo : VARCHAR(255)" vertex="1">
+          <mxGeometry height="26" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_desc" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     descrizione : TEXT" vertex="1">
+          <mxGeometry height="26" width="260" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_tipo" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     tipo : ENUM(bug, feature)" vertex="1">
+          <mxGeometry height="26" width="260" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_stato" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     stato : ENUM(open,progress,review,confirmed,closed)" vertex="1">
+          <mxGeometry height="26" width="260" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_pid" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;overflow=hidden;rotatable=0;" value="FK  progetto_id → progetti" vertex="1">
+          <mxGeometry height="26" width="260" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_cda" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;overflow=hidden;rotatable=0;" value="FK  creato_da → utenti" vertex="1">
+          <mxGeometry height="26" width="260" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_ass" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;overflow=hidden;rotatable=0;" value="FK  assegnato_a → utenti (nullable)" vertex="1">
+          <mxGeometry height="26" width="260" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_sev" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     severita : ENUM(low,medium,high,critical)" vertex="1">
+          <mxGeometry height="26" width="260" y="238" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_pri" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     priorita : ENUM(low,medium,high)" vertex="1">
+          <mxGeometry height="26" width="260" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_created" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="260" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t_updated" parent="t_ticket" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     updated_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="260" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="t_commenti" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;container=1;" value="commenti" vertex="1">
+          <mxGeometry height="186" width="230" x="700" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="r_c_id" parent="t_commenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;overflow=hidden;rotatable=0;" value="PK  id : INT AI" vertex="1">
+          <mxGeometry height="26" width="230" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r_c_testo" parent="t_commenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     testo : TEXT" vertex="1">
+          <mxGeometry height="26" width="230" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r_c_tid" parent="t_commenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;overflow=hidden;rotatable=0;" value="FK  ticket_id → ticket" vertex="1">
+          <mxGeometry height="26" width="230" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="r_c_uid" parent="t_commenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;overflow=hidden;rotatable=0;" value="FK  utente_id → utenti" vertex="1">
+          <mxGeometry height="26" width="230" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="r_c_created" parent="t_commenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="230" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="r_c_updated" parent="t_commenti" style="text;align=left;verticalAlign=middle;spacingLeft=6;overflow=hidden;rotatable=0;" value="     updated_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="230" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="e_us" edge="1" parent="1" source="t_utenti" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmanyToOne;startArrow=ERone;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="t_sessioni" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_upu" edge="1" parent="1" source="t_utenti" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmanyToOne;startArrow=ERone;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t_pu" value="N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pup" edge="1" parent="1" source="t_pu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmanyToOne;startArrow=ERmany;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="t_progetti" value="M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_up" edge="1" parent="1" source="t_utenti" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=ERmany;startArrow=ERone;exitX=1;exitY=0.6;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" target="t_progetti" value="creato_da (1:N)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="163" />
+              <mxPoint x="660" y="444" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_pt" edge="1" parent="1" source="t_progetti" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmanyToOne;startArrow=ERone;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="t_ticket" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="471" />
+              <mxPoint x="640" y="616" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ut_cda" edge="1" parent="1" source="t_utenti" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmany;startArrow=ERone;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" target="t_ticket" value="creato_da (1:N)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="136" />
+              <mxPoint x="180" y="666" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ut_ass" edge="1" parent="1" source="t_utenti" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=ERmany;startArrow=ERone;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="t_ticket" value="assegnato_a (0..N)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="178" />
+              <mxPoint x="210" y="701" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tc" edge="1" parent="1" source="t_ticket" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmanyToOne;startArrow=ERone;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="t_commenti" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="701" />
+              <mxPoint x="660" y="733" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_uc" edge="1" parent="1" source="t_utenti" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmany;startArrow=ERone;exitX=1;exitY=0.9;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" target="t_commenti" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="220" />
+              <mxPoint x="1000" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

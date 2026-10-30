@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Passa l'header Authorization a PHP (alcuni setup Apache lo strippano)
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Redirige tutto al router principale, escludendo file e directory esistenti
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

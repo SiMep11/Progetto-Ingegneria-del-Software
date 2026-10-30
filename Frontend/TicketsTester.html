@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le mie Segnalazioni - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleTickets.css"> 
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="homepageTester.html" class="menu-link" id="navDashboard">Dashboard</a>
+                <a href="ProgettiTester.html" class="menu-link" id="navProgetti">Tutti i Progetti</a>
+                <a href="#" class="menu-link active" id="navTickets">Le mie Segnalazioni</a>
+                <a href="commentiTester.html" class="menu-link" id="navCommenti">Feed e Commenti</a>
+                
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="topbar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cerca tra i ticket che hai aperto...">
+                </div>
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Giulia Bianchi</span>
+                    <img src="images/User1.png" alt="Profilo" class="user-avatar" id="userAvatar">
+                    
+                    <button class="btn-logout" id="btnLogout" title="Esci (Logout)">
+                        <img src="images/logout.png" alt="Logout" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                <div class="page-header-actions">
+                    <h2 class="page-title">Storico Mie Segnalazioni</h2>
+                    <button id="btnCreateTicket" class="btn-primary">
+                        <img src="images/plus.png" class="icon-add" alt="">
+                        Nuova Segnalazione
+                    </button>
+                </div>
+
+                <div class="full-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo</th>
+                                <th>Titolo</th>
+                                <th>Progetto</th>
+                                <th>Assegnato a</th>
+                                <th>Stato</th>
+                                <th>Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ticketsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalNewTicket">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Nuova Segnalazione</h3>
+                <button class="btn-close-modal" id="closeTicketModal">&times;</button>
+            </div>
+            <form class="modal-form" id="formNewTicket">
+                <div class="input-group">
+                    <label for="ticketTitle">Titolo</label>
+                    <input type="text" id="ticketTitle" placeholder="Breve descrizione del problema" required>
+                </div>
+                <div class="input-group">
+                    <label for="ticketType">Tipologia</label>
+                    <select id="ticketType" required>
+                        <option value="">Seleziona...</option>
+                        <option value="bug" selected>Bug (Problema)</option>
+                        
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="ticketProject">Progetto</label>
+                    <select id="ticketProject" required>
+                        <option value="">Seleziona un progetto...</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="ticketComment">Descrizione del problema</label>
+                    <textarea id="ticketComment" rows="4" placeholder="Descrivi il problema riscontrato..." required></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelTicketBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Invia Segnalazione</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalViewTicket">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Dettagli Segnalazione <span id="viewDetailId"></span></h3>
+                <button class="btn-close-modal" id="closeViewTicketModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <div class="input-group">
+                    <label>Progetto</label>
+                    <p class="read-only-data" id="viewDetailProject"></p>
+                </div>
+                <div class="input-group">
+                    <label>Tipologia e Stato</label>
+                    <div style="display:flex;gap:10px;margin-top:5px;">
+                        <span class="type-badge" id="viewDetailType"></span>
+                        <span class="status-badge" id="viewDetailStatus"></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Aperto da</label>
+                    <p class="read-only-data" id="viewDetailUser"></p>
+                </div>
+                <div class="input-group">
+                    <label>Testo Segnalazione</label>
+                    <div class="read-only-box" id="viewDetailDesc"></div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="closeDetailBtn" style="width:100%;">Chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalEditTicket">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Aggiorna Segnalazione <span></span></h3>
+                <button class="btn-close-modal" id="closeEditTicketModal">&times;</button>
+            </div>
+            <form class="modal-form" id="formEditTicket">
+                <div class="input-group">
+                    <label for="editTicketStatus">Stato</label>
+                    <select id="editTicketStatus" required>
+                        <option value="open">Aperto</option>
+                        <option value="progress">In Lavorazione</option>
+                        <option value="closed">Chiuso / Risolto</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelEditTicketBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Salva Modifiche</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalTicketComments">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Discussione <span>#T-1060</span></h3>
+                <button class="btn-close-modal" id="closeCommentsModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <div class="input-group">
+                    <label>Log Messaggi</label>
+                    <div class="read-only-box" style="max-height: 180px; overflow-y: auto;">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="newTicketComment">Rispondi</label>
+                    <textarea id="newTicketComment" rows="3" placeholder="Allego i log richiesti..." required></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="closeCommentsBtn">Chiudi</button>
+                    <button type="button" class="btn-primary" id="sendCommentBtn">Invia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalDeleteTicket">
+        <div class="modal-card" style="max-width: 400px;">
+            <div class="modal-header">
+                <h3 style="color: #DE350B;">Ritira Segnalazione</h3>
+                <button class="btn-close-modal" id="closeDeleteModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <p style="font-size: 15px; color: #4A5568; line-height: 1.6; margin-bottom: 25px;">
+                    Sei sicuro di voler eliminare definitivamente la segnalazione <strong>#T-1060</strong>? 
+                </p>
+                <div class="modal-actions" style="justify-content: center;">
+                    <button type="button" class="btn-secondary" id="cancelDeleteBtn">Annulla</button>
+                    <button type="button" class="btn-danger" id="confirmDeleteBtn">Sì, Elimina</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

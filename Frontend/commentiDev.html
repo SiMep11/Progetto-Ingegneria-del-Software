@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback e Commenti - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleTickets.css">
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="homepageDev.html" class="menu-link" id="navDashboard">Dashboard</a>
+                <a href="progettiDev.html" class="menu-link" id="navProgetti">I miei Progetti</a>
+                <a href="TicketsDev.html" class="menu-link" id="navTickets">I miei Tickets</a>
+                <a href="#" class="menu-link active" id="navCommenti">Feedback e Commenti</a>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="topbar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cerca per ticket, autore o testo...">
+                </div>
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Caricamento...</span>
+                    <img src="images/profile.png" alt="Profilo" class="user-avatar" id="userAvatar">
+                    <button class="btn-logout" id="btnLogout" title="Logout">
+                        <img src="images/logout.png" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                <div class="page-header-actions">
+                    <h2 class="page-title">Feedback e Commenti sui Ticket</h2>
+                </div>
+
+                <div class="full-table-container">
+                    <div id="myCommentsTableBody" class="comment-feed">
+                        <p class="feed-loading">Caricamento...</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalEditComment">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Modifica Commento</h3>
+                <button class="btn-close-modal" id="closeEditCommentModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <div class="input-group">
+                    <label for="editCommentText">Testo</label>
+                    <textarea id="editCommentText" rows="5" placeholder="Aggiorna il tuo commento..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelEditCommentBtn">Annulla</button>
+                    <button type="button" class="btn-primary" id="saveEditCommentBtn">Salva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

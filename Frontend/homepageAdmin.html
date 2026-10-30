@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleHomeAdmin.css">
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-link active" id="navDashboard">Dashboard</a>
+                <a href="progettiAdmin.html" class="menu-link" id="navProgetti">Progetti</a>
+                <a href="TicketsAdmin.html" class="menu-link" id="navTickets">Tickets</a>
+                <a href="UtentiAdmin.html" class="menu-link" id="navUtenti">Utenti</a>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="topbar">
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Admin</span>
+                    <img src="images/profile.png" alt="Profilo" class="user-avatar" id="userAvatar">
+                    <button class="btn-logout" id="btnLogout" title="Esci">
+                        <img src="images/logout.png" alt="Logout" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                <section class="widgets-section">
+                    <div class="widget-card action-widget">
+                        <div class="widget-info">
+                            <h3>Nuovo Progetto</h3>
+                            <p>Inizia un nuovo ciclo di sviluppo</p>
+                        </div>
+                        <button id="btnGoProjects" class="btn-primary">
+                            <img src="images/plus.png" class="icon-add" alt="">
+                            Vai ai Progetti
+                        </button>
+                    </div>
+                    <div class="widget-card action-widget">
+                        <div class="widget-info">
+                            <h3>Gestisci Ticket</h3>
+                            <p>Apri e assegna ticket agli sviluppatori</p>
+                        </div>
+                        <button id="btnGoTickets" class="btn-secondary">
+                            <img src="images/plus.png" class="icon-add" alt="">
+                            Vai ai Ticket
+                        </button>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <section class="data-section">
+                    <div class="projects-container">
+                        <h3 class="section-title">Progetti Recenti</h3>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome Progetto</th>
+                                        <th>Bug Aperti</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashAdminProjects">
+                                    <tr><td colspan="3" style="text-align:center;padding:1rem;color:#888;">Caricamento...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="activities-container">
+                        <h3 class="section-title">✓ Ticket Confermati — Da Chiudere</h3>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Titolo</th>
+                                        <th>Tipo</th>
+                                        <th>Azione</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashAdminTickets">
+                                    <tr><td colspan="4" style="text-align:center;padding:1rem;color:#888;">Caricamento...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

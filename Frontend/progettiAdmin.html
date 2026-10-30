@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetti - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleProgettiAdmin.css"> 
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="homepageAdmin.html" class="menu-link" id="navDashboard">Dashboard</a>
+                <a href="#" class="menu-link active" id="navProgetti">Progetti</a>
+                <a href="TicketsAdmin.html" class="menu-link" id="navTickets">Tickets</a>
+                <a href="UtentiAdmin.html" class="menu-link" id="navUtenti">Utenti</a>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            
+            <header class="topbar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cerca un progetto...">
+                </div>
+
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Luigi Rossi</span>
+                    <img src="images/User3.png" alt="Profilo" class="user-avatar" id="userAvatar">
+                    
+                    <button class="btn-logout" id="btnLogout" title="Esci (Logout)">
+                        <img src="images/logout.png" alt="Logout" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                
+                <div class="page-header-actions">
+                    <h2 class="page-title">Elenco Completo Progetti</h2>
+                    <button id="btnCreateProject" class="btn-primary">
+                        <img src="images/plus.png" class="icon-add" alt="">
+                        Nuovo Progetto
+                    </button>
+                </div>
+
+                <div class="full-table-container">
+                    <table class="data-table" id="projectsTable">
+                        <thead>
+                            <tr>
+                                <th>Nome Progetto</th>
+                                <th>Team</th>
+                                <th>Bug Aperti</th>
+                                <th>Scadenza</th>
+                                <th>Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projectsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Modale Nuovo Progetto -->
+    <div class="modal-overlay" id="modalNewProject">
+        <div class="modal-card">
+            
+            <div class="modal-header">
+                <h3>Crea Nuovo Progetto</h3>
+                <button class="btn-close-modal" id="closeProjectModal">&times;</button>
+            </div>
+            
+            <form class="modal-form" id="formNewProject">
+                
+                <div class="input-group">
+                    <label for="newProjectName">Nome Progetto</label>
+                    <input type="text" id="newProjectName" placeholder="es. Restyling App" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Sviluppatori nel Team</label>
+                    <div id="newMemberCheckboxes" class="member-checkbox-list">
+                        <p style="color:#9BA8B5;font-size:13px;margin:0;">Caricamento...</p>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="newProjectDeadline">Data di Scadenza</label>
+                    <input type="date" id="newProjectDeadline" required>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelProjectBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Salva Progetto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalEditProject">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Modifica Progetto <span style="color:#6B7C93; font-size:16px;">#PRJ-01</span></h3>
+                <button class="btn-close-modal" id="closeEditProjectModal">&times;</button>
+            </div>
+            <form class="modal-form" id="formEditProject">
+                <div class="input-group">
+                    <label for="editProjectName">Nome Progetto</label>
+                    <input type="text" id="editProjectName" value="E-commerce Flow" required>
+                </div>
+                <div class="input-group">
+                    <label>Sviluppatori nel Team</label>
+                    <div id="editMemberCheckboxes" class="member-checkbox-list">
+                        <p style="color:#9BA8B5;font-size:13px;margin:0;">Caricamento...</p>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="editProjectDeadline">Data di Scadenza</label>
+                    <input type="date" id="editProjectDeadline" value="2026-10-25" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelEditProjectBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Salva Modifiche</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalDeleteProject">
+        <div class="modal-card" style="max-width: 420px;">
+            <div class="modal-header">
+                <h3 style="color:#DE350B;">Conferma Eliminazione</h3>
+                <button class="btn-close-modal" id="closeDeleteProjectModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <p style="font-size:15px;color:#4A5568;line-height:1.6;margin-bottom:24px;">
+                    Sei sicuro di voler eliminare il progetto <strong>#1</strong>?<br>
+                    Tutti i ticket associati verranno eliminati. Questa azione non può essere annullata.
+                </p>
+                <div class="modal-actions" style="justify-content:center;">
+                    <button type="button" class="btn-secondary" id="cancelDeleteProjectBtn">Annulla</button>
+                    <button type="button" class="btn-danger" id="confirmDeleteProjectBtn">Sì, Elimina</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalProjectTicket">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Nuovo Ticket per <span>E-commerce Flow</span></h3>
+                <button class="btn-close-modal" id="closeProjectTicketModal">&times;</button>
+            </div>
+            <form class="modal-form" id="formProjectTicket">
+                <div class="input-group">
+                    <label for="projectTicketTitle">Titolo</label>
+                    <input type="text" id="projectTicketTitle" placeholder="Descrivi brevemente il problema o la funzionalità..." required>
+                </div>
+                <div class="input-group">
+                    <label for="projectTicketType">Tipologia</label>
+                    <select id="projectTicketType" required>
+                        <option value="">Seleziona...</option>
+                        <option value="bug">Bug (Problema)</option>
+                        <option value="feature">Feature (Nuova Funzione)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="projectTicketDesc">Descrizione</label>
+                    <textarea id="projectTicketDesc" rows="4" placeholder="Descrivi il problema o la richiesta..." required></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelProjectTicketBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Apri Ticket</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

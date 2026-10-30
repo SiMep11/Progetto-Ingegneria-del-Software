@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sviluppatore - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleHome.css">
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-link active" id="navDashboard">Dashboard</a>
+                <a href="progettiDev.html" class="menu-link" id="navProgetti">I miei Progetti</a>
+                <a href="TicketsDev.html" class="menu-link" id="navTickets">I miei Tickets</a>
+                <a href="commentiDev.html" class="menu-link" id="navCommenti">Feedback e Commenti</a>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="topbar">
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Developer</span>
+                    <img src="images/profile.png" alt="Profilo" class="user-avatar" id="userAvatar">
+                    <button class="btn-logout" id="btnLogout" title="Esci">
+                        <img src="images/logout.png" alt="Logout" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                <section class="widgets-section">
+                    <div class="widget-card action-widget">
+                        <div class="widget-info">
+                            <h3>I miei Ticket</h3>
+                            <p>Gestisci i ticket che ti sono stati assegnati</p>
+                        </div>
+                        <button id="btnGoTickets" class="btn-primary">
+                            <img src="images/plus.png" class="icon-add" alt="">
+                            Vai ai Ticket
+                        </button>
+                    </div>
+                    <div class="widget-placeholder"></div>
+                </section>
+
+                <hr class="section-divider">
+
+                <section class="data-section" style="flex-direction: column;">
+                    <div class="projects-container">
+                        <h3 class="section-title">I miei Progetti</h3>
+                        <div class="scrollable-table">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome Progetto</th>
+                                        <th>Bug Aperti</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashDevProjects">
+                                    <tr><td colspan="3" style="text-align:center;padding:1rem;color:#888;">Caricamento...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tickets-assigned-container">
+                        <h3 class="section-title">Ticket attivi assegnati a me</h3>
+                        <div class="scrollable-table">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Titolo</th>
+                                        <th>Stato</th>
+                                        <th>Tipo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashDevTickets">
+                                    <tr><td colspan="4" style="text-align:center;padding:1rem;color:#888;">Caricamento...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

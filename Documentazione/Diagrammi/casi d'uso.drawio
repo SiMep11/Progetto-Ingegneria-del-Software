@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Pagina-1" id="pzeQX1mmRYUXW37z94HL">
+    <mxGraphModel dx="1426" dy="841" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="system" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;                  verticalAlign=top;fontSize=13;fontStyle=1;" value="Sistema di Bug Tracking&lt;div&gt;FlowCheck&lt;/div&gt;" vertex="1">
+          <mxGeometry height="640" width="760" x="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Amministratore" vertex="1">
+          <mxGeometry height="60" width="30" x="65" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="developer" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Sviluppatore" vertex="1">
+          <mxGeometry height="60" width="30" x="1050" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="reporter" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Reporter" vertex="1">
+          <mxGeometry height="60" width="30" x="1050" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_gp" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gestione Progetto" vertex="1">
+          <mxGeometry height="50" width="202" x="225" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_gt" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gestione Ticket&#xa;(Bug &amp; Feature)" vertex="1">
+          <mxGeometry height="50" width="202" x="225" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_gc" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gestione Commenti" vertex="1">
+          <mxGeometry height="50" width="202" x="225" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_gu" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gestione Utenti&#xa;(crea Developer / Reporter)" vertex="1">
+          <mxGeometry height="50" width="202" x="225" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_login" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Login" vertex="1">
+          <mxGeometry height="50" width="202" x="635" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_abt" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Aggiunta Ticket Bug" vertex="1">
+          <mxGeometry height="50" width="202" x="635" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_ast" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Aggiornamento Stato Ticket" vertex="1">
+          <mxGeometry height="50" width="202" x="635" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_ac" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Aggiunta Commento" vertex="1">
+          <mxGeometry height="50" width="202" x="635" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_gp" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;" target="uc_gp" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_gt" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;" target="uc_gt" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_gc" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;" target="uc_gc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_gu" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;" target="uc_gu" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_login" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;rounded=0;" target="uc_login" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d_login" edge="1" parent="1" source="developer" style="endArrow=classic;html=1;rounded=0;" target="uc_login" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d_abt" edge="1" parent="1" source="developer" style="endArrow=classic;html=1;rounded=0;" target="uc_abt" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d_ast" edge="1" parent="1" source="developer" style="endArrow=classic;html=1;rounded=0;" target="uc_ast" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d_ac" edge="1" parent="1" source="developer" style="endArrow=classic;html=1;rounded=0;" target="uc_ac" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_login" edge="1" parent="1" source="reporter" style="endArrow=classic;html=1;rounded=0;" target="uc_login" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_abt" edge="1" parent="1" source="reporter" style="endArrow=classic;html=1;rounded=0;" target="uc_abt" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_ac" edge="1" parent="1" source="reporter" style="endArrow=classic;html=1;rounded=0;" target="uc_ac" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

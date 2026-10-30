@@ -1,2 +1,11 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Forza LF su tutti i file testuali — previene problemi CRLF su Windows
+* text=auto eol=lf
+
+# File binari — nessuna conversione
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.drawio binary

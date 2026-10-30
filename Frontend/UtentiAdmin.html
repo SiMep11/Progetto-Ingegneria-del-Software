@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utenti - FlowCheck</title>
+    <link rel="stylesheet" href="script/CSS/styleUtentiAdmin.css"> 
+    <script type="module" src="script/Javascript/app.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-brand-name">FlowCheck</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="homepageAdmin.html" class="menu-link" id="navDashboard">Dashboard</a>
+                <a href="progettiAdmin.html" class="menu-link" id="navProgetti">Progetti</a>
+                <a href="TicketsAdmin.html" class="menu-link" id="navTickets">Tickets</a>
+                <a href="#" class="menu-link active" id="navUtenti">Utenti</a>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            
+            <header class="topbar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cerca un utente per nome o email...">
+                </div>
+
+                <div class="user-controls">
+                    <span class="user-name" id="loggedUserName">Luigi Rossi</span>
+                    <img src="images/User3.png" alt="Profilo" class="user-avatar" id="userAvatar">
+                    
+                    <button class="btn-logout" id="btnLogout" title="Esci (Logout)">
+                        <img src="images/logout.png" alt="Logout" style="width: 24px;">
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                
+                <div class="page-header-actions">
+                    <h2 class="page-title">Gestione Utenti</h2>
+                    <button id="btnCreateUser" class="btn-primary">
+                        <img src="images/plus.png" class="icon-add" alt="">
+                        Nuovo Utente
+                    </button>
+                </div>
+
+                <div class="full-table-container">
+                    <table class="data-table" id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Cognome</th>
+                                <th>Mail Aziendale</th>
+                                <th>Ruolo</th>
+                                <th>Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalNewUser">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Crea Nuovo Account Utente</h3>
+                <button class="btn-close-modal" id="closeNewUserModal">&times;</button>
+            </div>
+            <form class="modal-form" id="formNewUser">
+                <div class="input-group">
+                    <label for="userName">Nome</label>
+                    <input type="text" id="userName" placeholder="es. Mario" required>
+                </div>
+                <div class="input-group">
+                    <label for="userSurname">Cognome</label>
+                    <input type="text" id="userSurname" placeholder="es. Rossi" required>
+                </div>
+                <div class="input-group">
+                    <label for="userEmail">Mail Aziendale</label>
+                    <input type="email" id="userEmail" placeholder="m.rossi@flowcheck.it" required>
+                </div>
+                <div class="input-group">
+                    <label for="userPassword">Password</label>
+                    <input type="password" id="userPassword" placeholder="Password temporanea" required>
+                </div>
+                <div class="input-group">
+                    <label for="userRole">Ruolo Sistema</label>
+                    <select id="userRole" required>
+                        <option value="">Seleziona ruolo...</option>
+                        <option value="developer">Sviluppatore</option>
+                        <option value="tester">Tester</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelNewUserBtn">Annulla</button>
+                    <button type="submit" class="btn-primary">Crea Utente</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalViewProfile">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Profilo Utente</h3>
+                <button class="btn-close-modal" id="closeProfileModal">&times;</button>
+            </div>
+            <div class="modal-form">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="images/profile.png" alt="Avatar" style="border-radius: 50%; border: 3px solid #E6EBF1; width: 80px; height: 80px; object-fit: cover;">
+                    <h4 id="viewProfileName" style="margin-top: 10px; color: #0A2540;">—</h4>
+                    <span id="viewProfileRole" class="role-badge role-admin">—</span>
+                </div>
+                <div class="input-group">
+                    <label>Contatto Email</label>
+                    <p id="viewProfileEmail" class="read-only-data">—</p>
+                </div>
+                <div class="input-group">
+                    <label>Data Iscrizione</label>
+                    <p id="viewProfileDate" class="read-only-data">—</p>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="closeProfileBtn">Chiudi</button>
+                    <button type="button" class="btn-primary" id="resetUserPasswordBtn">Reimposta Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalDeleteUser">
+        <div class="modal-card" style="max-width: 400px;">
+            <div class="modal-header">
+                <h3 style="color: #DE350B;">Elimina Utente</h3>
+                <button class="btn-close-modal" id="closeDeleteUserModal">&times;</button>
+            </div>
+            <div class="modal-form text-center">
+                <p style="font-size: 15px; color: #4A5568; line-height: 1.6; margin-bottom: 25px;">
+                    Stai per eliminare l'accesso di <strong id="deleteUserName">—</strong>. <br>
+                    Tutti i ticket assegnati rimarranno nel sistema ma l'utente non potrà più accedere.
+                </p>
+                <div class="modal-actions" style="justify-content: center;">
+                    <button type="button" class="btn-secondary" id="cancelDeleteUserBtn">ANNULLA</button>
+                    <button type="button" class="btn-danger" id="confirmDeleteUserBtn">ELIMINA DEFINITIVAMENTE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
